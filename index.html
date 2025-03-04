@@ -1,0 +1,117 @@
+<!-- archivo: /pagina/tarea_4.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea 4 - Proyecto Multimedia</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <!-- Cabecera -->
+  <header>
+    <div class="logo">
+      <img src="imagenes/logo.svg" alt="Logo">
+      <a href="https://icon-icons.com/es/icono/atletismo-deporte-olimpico/67243">Pincha para ver fuente</a>
+    </div>
+    <nav class="navegacion">
+      <ul>
+        <li><a href="#imagenes">Imágenes</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="pagina/tarea_4.html" target="_blank">Informe</a></li>
+      </ul>
+    </nav>
+
+    <!-- Versión móvil: icono hamburguesa  (visible solo en móviles) -->
+    <button class="menu-movil" onclick="toggleMenu()">
+      <img src="imagenes/hamburguesa.svg" alt="Menú">
+    </button>
+    
+
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <!-- Sección Imágenes -->
+    <section id="imagenes">
+    <h2>Imágenes</h2>
+    <div class="galeria-imagenes">
+        <figure class="imagen-destacada">
+          <img src="imagenes/2_Internet.jpg" alt="Internet">
+          <figcaption>2_Internet.jpg</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imagenes/1_Imagen.png" alt="Imagen básica">
+          <figcaption>1_Imagen.png</figcaption>
+        </figure>
+                
+        <figure>
+          <img src="imagenes/4_Composicion_Gimp.png" alt="Composición">
+          <figcaption>4_Composicion.png</figcaption>
+        </figure>
+        
+        <figure>
+          <picture>
+            <!-- 
+              El elemento <source> define una versión alternativa de la imagen
+              media="(max-width: 399px)": Esta imagen se mostrará solo en dispositivos
+              con anchura de pantalla menor a 400px (móviles pequeños)
+              srcset: Ruta a la imagen optimizada para dispositivos pequeños
+            -->
+            <source media="(max-width: 399px)" srcset="imagenes/6_Composicion_400.png">
+            <!-- 
+              Imagen por defecto: Se muestra cuando ninguna de las condiciones 
+              de los elementos <source> se cumple, o en navegadores que no 
+              soportan el elemento <picture>
+              Esta imagen aparecerá en dispositivos con anchura ≥ 400px
+            -->
+            <img src="imagenes/5_Composicion_1000.jpg" alt="Composición optimizada">
+          </picture>
+          <figcaption>Responsive</figcaption>
+        </figure>
+    </div>
+    </section>
+
+    <!-- Sección Audio -->
+    <section id="audio">
+      <h2>Audio</h2>
+      <audio controls>
+        <source src="audios/1_audio.mp3" type="audio/mp3">
+        <source src="audios/2_audio.aac" type="audio/aac">
+        Tu navegador no soporta este elemento.
+      </audio>
+    </section>
+
+    <!-- Sección Video -->
+    <section id="video">
+      <h2>Video</h2>
+      <video id="miVideo" poster="imagenes/2_Internet.jpg" controls>
+        <source src="videos/1_video.mp4" type="video/mp4">
+        <source src="videos/2_video.webm" type="video/webm">
+        Tu navegador no soporta el elemento video.
+      </video>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <div class="footer-imagenes">
+      <p>Edición de Imágenes: Canvas/Gimp</p>
+    </div>
+    <div class="footer-audio">
+      <p>Edición de Audio: Adobe Premiere Pro 2024</p>
+    </div>
+    <div class="footer-video">
+      <p>Edición de Video: Adobe Premiere Pro 2024</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>
